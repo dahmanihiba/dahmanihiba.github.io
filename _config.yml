@@ -15,10 +15,9 @@ title_separator          : "-"
 name                     : &name "Hiba Dahmani"
 description              : &description "PhD candidate in Computer Vision researching scalable 3D scene reconstruction and generation using diffusion models and neural 3D representations."
 
-url                      : "https://HibaDahmani.github.io"
-baseurl                  : ""
-repository               : "dahmanihiba/HibaDahmani.github.io"
-
+url: "https://dahmanihiba.github.io"
+baseurl: ""
+repository: "dahmanihiba/dahmanihiba.github.io"
 
 # Site Author
 author:
