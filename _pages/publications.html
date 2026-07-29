@@ -5,32 +5,182 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+.publication-preview {
+  margin-bottom: 3rem;
+  padding: 1.2rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.publication-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+.publication-preview h2 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.publication-preview .venue {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: #eef3f8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-frame {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.publication-links a {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-button {
+  color: white !important;
+  background: #2f6f9f;
+}
+
+.paper-button {
+  color: white !important;
+  background: #444;
+}
+
+.publication-description {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .project-frame {
+    height: 430px;
+  }
+
+  .publication-preview {
+    padding: 0.8rem;
+  }
+}
+</style>
+
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+<p>
+  You can also find my articles on
+  <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">
+    my Google Scholar profile
+  </a>.
+</p>
 {% endif %}
 
 
+<!-- SEM-ROVER -->
 
+<section class="publication-preview">
+
+  <h2>
+    SEM-ROVER: Semantic Voxel-Guided Diffusion for Large-Scale Driving Scene Generation
+  </h2>
+
+  <span class="venue">ECCV 2026</span>
+
+  <p class="publication-description">
+    A framework for generating large-scale, multiview-consistent outdoor
+    driving scenes using a semantic-conditioned 3D diffusion model,
+    Σ-Voxfield representation, progressive spatial outpainting, and
+    deferred rendering.
+  </p>
+
+  <iframe
+    class="project-frame"
+    src="https://dahmanihiba.github.io/SEM-ROVER/"
+    title="SEM-ROVER project webpage preview"
+    loading="lazy">
+  </iframe>
+
+  <div class="publication-links">
+    <a
+      class="project-button"
+      href="https://dahmanihiba.github.io/SEM-ROVER/"
+      target="_blank"
+      rel="noopener">
+      Full project website
+    </a>
+
+    <a
+      class="paper-button"
+      href="https://arxiv.org/abs/2604.06113"
+      target="_blank"
+      rel="noopener">
+      Paper
+    </a>
+  </div>
+
+</section>
+
+
+<!-- SWAG -->
+
+<section class="publication-preview">
+
+  <h2>
+    SWAG: Splatting in the Wild Images with Appearance-conditioned Gaussians
+  </h2>
+
+  <span class="venue">ECCV 2024</span>
+
+  <p class="publication-description">
+    A method extending 3D Gaussian Splatting to unconstrained,
+    in-the-wild image collections by modelling appearance changes and
+    transient scene content.
+  </p>
+
+  <iframe
+    class="project-frame"
+    src="https://dahmanihiba.github.io/SWAG/"
+    title="SWAG project webpage preview"
+    loading="lazy">
+  </iframe>
+
+  <div class="publication-links">
+    <a
+      class="project-button"
+      href="https://dahmanihiba.github.io/SWAG/"
+      target="_blank"
+      rel="noopener">
+      Full project website
+    </a>
+
+    <a
+      class="paper-button"
+      href="https://arxiv.org/abs/2403.10427"
+      target="_blank"
+      rel="noopener">
+      Paper
+    </a>
+  </div>
+
+</section>
